@@ -242,7 +242,8 @@
                 "fullsrc": info.fullsrc || '',
                 "title": info.title || '',
                 "description": info.description || '',
-                "category": info.category || ''
+                "category": info.category || '',
+                "poem":info.poem || ''
             };
 
             if (item.category) {
@@ -267,7 +268,8 @@
                     "fullsrc": img.getAttribute('data-fullsrc') || '',
                     "title": img.getAttribute('title') || img.getAttribute('alt') || '',
                     "description": img.getAttribute('data-desc') || '',
-                    "category": img.getAttribute('data-category') || ''
+                    "category": img.getAttribute('data-category') || '',
+                    "poem": img.getAttribute('data-poem') || ''
                 };
 
                 addInfo(item);
@@ -299,11 +301,12 @@
                 }
             }
 
-            var $img, title, desc;
+            var $img, title, desc, poem;
             $imgs.wrapAll('<div class="galereya-grid" />').each(function (i, img) {
                 $img = $(img);
                 title = data[i].title;
                 desc = data[i].description;
+                poem = data[i].poem;
                 $img.addClass('galereya-cell-img')
                     .wrap('<div class="galereya-cell" data-index="' + i + '"></div>')
                     .parent()
@@ -321,7 +324,7 @@
             $sliderContainer = $('<div class="galereya-slider-container" />');
             $sliderNext = $('<div class="galereya-slider-nav right" />');
             $sliderPrev = $('<div class="galereya-slider-nav left" />');
-            $sliderDesc = $('<div class="galereya-slider-desc" />');
+            //$sliderDesc = $('<div class="galereya-slider-desc" />');
             $sliderClose = $('<div class="galereya-slider-close" />');
             $sliderPlay = $('<div class="galereya-slider-play" />');
             $slider
@@ -564,9 +567,10 @@
             $slide = $('<div class="galereya-slider-slide" />')
                 .html('<div class="galereya-slide-loader"></div>');
 
-            $img = $('<img class="galereya-slide-img" src="' + data[index].fullsrc + '" alt="' + data[index].title + '" />').load(function () {
+            $img = $('<img class="galereya-slide-img" src="' + data[index].fullsrc + '" alt="' + data[index].title + '" />' +
+                '<div align="center" class="galereya-poem-block">' + data[index].description + '<div class="galereya-poem-content">' + data[index].poem + '</div></div>').load(function () {
                 $slide.html($img);
-                $img.css('margin-top', ($(window).height() - $img.height()) / 2);
+                //$img.css('margin-top', ($(window).height() - $img.height()) / 2);
                 if (slideShowInterval) {
                     startSlideShow(); //resume slide show when an image is loaded
                 }
@@ -642,7 +646,7 @@
             currentSlideIndex = nextSlideIndex;
             $currentSlide = $slide;
             index = visibleCells[currentSlideIndex].getAttribute('data-index');
-            $sliderDesc.empty().html('<div class="galereya-slider-desc-title">' + data[index].title + ' </div>' + data[index].description);
+            //$sliderDesc.empty().html('<div class="galereya-slider-desc-title">' + data[index].title + ' </div>' + data[index].description);
             $currentImg = $slide.find('.galereya-slide-img');
             $currentImg.css('margin-top', ($(window).height() - $currentImg.height()) / 2);
 

@@ -2,35 +2,53 @@
 	"lowsrc":"photos\/thumbnails\/katya_zarubina.jpg",
 	"fullsrc":"photos\/katya_zarubina.jpg",
 	"description":"Екатерина Зарубина",
-	"category":"QL"
+	"poem":"no"
 },
 {
 	"lowsrc":"photos\/thumbnails\/maria_litvinec.jpg",
 	"fullsrc":"photos\/maria_litvinec.jpg",
 	"description":"Мария Литвинец",
-	"category":"QL"
+	"poem":"no"
 },
 {
 	"lowsrc":"photos\/thumbnails\/lena_egorova.jpg",
 	"fullsrc":"photos\/lena_egorova.jpg",
-	"description":"Мария Литвинец",
-	"category":"QL"
+	"description":"Елена Егорова",
+	"poem":"no"
 },
 {
 	"lowsrc":"photos\/thumbnails\/nastya_li.jpg",
 	"fullsrc":"photos\/nastya_li.jpg",
-	"description":"Мария Литвинец",
-	"category":"QL"
+	"description":"Анастасия Ли",
+	"poem":"no"
 },
 {
 	"lowsrc":"photos\/thumbnails\/oksana_razina.jpg",
 	"fullsrc":"photos\/oksana_razina.jpg",
-	"description":"Мария Литвинец",
-	"category":"QL"
+	"description":"Оксана Разина",
+	"poem":"no"
 },
 {
 	"lowsrc":"photos\/thumbnails\/tanya_birukova.jpg",
 	"fullsrc":"photos\/tanya_birukova.jpg",
-	"description":"Мария Литвинец",
-	"category":"QL"
+	"description":"Татьяна Бирюкова",
+	"poem":"no"
+},
+{
+	"lowsrc":"photos\/thumbnails\/karina_karimova.jpg",
+	"fullsrc":"photos\/karina_karimova.jpg",
+	"description":"Карина Каримова",
+	"poem":"Пришла весна ­ растаяли снега,<br>А Карина тестит все без сна..<br>Её мы страстно любим, Да!<br>Она у нас такая вот одна<br><br>Губы яркие Карины,<br>Прям как ягоды рябины.<br>С 8 марта, дорогая!<br>Желаем, слог превозмогая!"
+},
+{
+	"lowsrc":"photos\/thumbnails\/pavla_tolokonina.jpg",
+	"fullsrc":"photos\/pavla_tolokonina.jpg",
+	"description":"Павла Толоконина",
+	"poem":"no"
+},
+{
+	"lowsrc":"photos\/thumbnails\/lena_terehova.jpg",
+	"fullsrc":"photos\/lena_terehova.jpg",
+	"description":"Елена Терехова",
+	"poem":"no"
 }]

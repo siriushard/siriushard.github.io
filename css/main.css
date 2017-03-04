@@ -1,0 +1,51 @@
+::-webkit-scrollbar {
+	display: none !important;
+}
+::-moz-scrollbar {
+	display: none;
+}
+::scrollbar { 
+	display: none; 
+}
+
+body{
+	background: url("/img/background.jpg") 100% 100% no-repeat fixed;
+	background-size: cover;
+
+	font-family: 'Lobster', cursive;
+    font-size: 20px;
+}
+
+/*Надписи в превью*/
+.galereya-cell-desc{
+	font-size: 18pt;
+}
+
+/*Фоновое изображение в слайде*/
+.galereya-slider-slide{
+	background: url("/img/background.jpg") 100% 100% no-repeat fixed;
+	background-size: cover;
+}
+
+.galereya-cell-overlay{
+	-webkit-box-shadow: inset 0 0 10px 3px #bec176;
+	box-shadow: inset 0 0 10px 3px #bec176;
+}
+
+.galereya-cell-desc{
+	background: rgb(208, 210, 80);
+}
+
+.galereya-slide-img{
+	float: left;
+}
+
+.galereya-poem-block{
+	margin-top:30px;
+	font-size:30pt;
+}
+
+.galereya-poem-content{
+	margin:20px 0;
+	font-size: 20pt;
+}

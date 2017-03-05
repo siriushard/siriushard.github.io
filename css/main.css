@@ -98,6 +98,10 @@ header{
 	height: 200px;
 	opacity: 1;
 	background-color: rgba(0, 0, 0, 0.05);
+	transition: 0.3s ease;
+}
+.galereya-slider-nav:hover{
+	width: 55px;
 }
 
 .galereya-poem-block{

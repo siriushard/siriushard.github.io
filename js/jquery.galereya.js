@@ -322,10 +322,10 @@
 
             $slider = $('<div class="galereya-slider" />');
             $sliderContainer = $('<div class="galereya-slider-container" />');
-            $sliderNext = $('<div class="galereya-slider-nav right" />');
-            $sliderPrev = $('<div class="galereya-slider-nav left" />');
-            //$sliderDesc = $('<div class="galereya-slider-desc" />');
-            $sliderClose = $('<div class="galereya-slider-close" />');
+            var slider_margin = ($(window).height() - 200) / 2;
+            $sliderNext = $('<div class="galereya-slider-nav right" style="margin-top:' + slider_margin + 'px;" />');
+            $sliderPrev = $('<div class="galereya-slider-nav left"  style="margin-top:' + slider_margin + 'px;" />');
+            $sliderClose = $('<div class="galereya-slider-close">Закрыть</div>');
             $sliderPlay = $('<div class="galereya-slider-play" />');
             $slider
                 .addClass(self.options.modifier)
@@ -566,13 +566,10 @@
             $slide = $('<div class="galereya-slider-slide" />')
                 .html('<div class="galereya-slide-loader"></div>');
 
-            $img = $('<img class="galereya-slide-img" src="' + data[index].fullsrc + '" alt="' + data[index].title + '" />' +
-                '<div align="center" class="galereya-poem-block">' + data[index].description + '<div class="galereya-poem-content">' + data[index].poem + '</div></div>').load(function () {
+            $img = $('<img class="galereya-slide-img" src="' + data[index].fullsrc + '" alt="' + data[index].title + '" />').load(function () {
                 $slide.html($img);
-                //$img.css('margin-top', ($(window).height() - $img.height()) / 2);
-                if (slideShowInterval) {
-                    startSlideShow(); //resume slide show when an image is loaded
-                }
+                $img.css('margin-top', ($(window).height() - $img.height()) / 2);
+                $slide.append('<div align="center" class="galereya-poem-block">' + data[index].description + '<div class="galereya-poem-content">' + data[index].poem + '</div></div>');
             });
 
             return $slide;

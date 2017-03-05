@@ -22,6 +22,7 @@ header{
 	background: linear-gradient(to bottom, #babf35, rgba(230, 227, 120, 0));
 	width: 100%;
 	height: 600px;
+	margin-bottom: 40px;
 }
 
 .header-main-block{
@@ -30,10 +31,15 @@ header{
 	border-radius: 18px;
 	margin: 0 30px 0 30px;
 	cursor: default;
-	transition: ease-out 0.4s;
+	transition: 0.4s ease-out;
 }
 .header-main-block:hover{
 	box-shadow:0px 0px 50px 1px rgb(242, 249, 161);
+}
+
+.header-main-text{
+	font-size: 25pt;
+	margin: 10px 0 60px 0;
 }
 
 .button{
@@ -41,7 +47,7 @@ header{
 	padding: 16px;
 	border-radius: 27px;
 	color: #6b6b6b;
-	transition: ease 0.3s;
+	transition: 0.3s ease;
 }
 .button:hover{
 	padding: 24px;
@@ -70,6 +76,28 @@ header{
 
 .galereya-slide-img{
 	float: left;
+	margin-left: 100px;
+	border:6px solid rgba(248, 255, 162, 0.5);
+	border-radius: 20px;
+}
+
+.galereya-slider-close{
+	background:rgb(248, 255, 162);
+	padding: 3px 8px;
+	opacity: 1;
+	width: 92px;
+	height: 36px;
+	transition: ease 0.3s;
+	-webkit-transition: 0.3s ease;
+}
+.galereya-slider-close:hover{
+	border-radius: 0 0 20px 0;
+}
+
+.galereya-slider-nav{
+	height: 200px;
+	opacity: 1;
+	background-color: rgba(0, 0, 0, 0.05);
 }
 
 .galereya-poem-block{

@@ -9,20 +9,36 @@
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
 	<link rel="stylesheet" href="css/jquery.galereya.css">
     <link rel="stylesheet" href="css/main.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://flesler-plugins.googlecode.com/files/jquery.scrollTo-1.4.3.1-min.js" type="text/javascript"></script>
 
-    <!--[if lt IE 9]>
-    <link rel="stylesheet" href="css/jquery.galereya.ie.css">
-    <![endif]-->
+    <script type="text/javascript">
+        $(function(){
+            $('a[href^="#"]').click(function(){
+                var target = $(this).attr('href');
+                $('html, body').animate({scrollTop: $(target).offset().top}, 800);
+                return false; 
+            }); 
+        });
+    </script>
 </head>
 <body>
+    <header align="center">
+        <img src="img/logo.png" width="40%"/><br>
+        <embed src="sounds/background.mp3" autostart="true" loop="true" width="1" height="1"></embed>
+        <div class="header-main-block">
+        <span style="font-size: 38pt;">Дорогие девушки!</span>
+        <p style="font-size: 25pt;margin-bottom:60px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla id diam sed magna porttitor consectetur. Donec dignissim orci ac nibh tempus, et egestas lacus convallis. Praesent malesuada orci et enim porta ullamcorper. Ut a ex vel eros suscipit posuere. Aliquam lacinia, quam a condimentum tempor, diam ante bibendum nisi, sed.</p>
+        </div>
+        <a class="button" href="#gallery">Перейти к стихотворениям</a>
+    </header>
 	<div id="gallery"></div>
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/jquery-1.9.1.min.js"><\/script>')</script>
         <script src="js/jquery.galereya.js"></script>
         <script>
             $(function() {
                 $('#gallery').galereya({
                     wave: false,
+                    slideShowSpeed: 1000000,
                     load: function(next) {
                         $.getJSON('photos.json', function(data) {
                             next(data);

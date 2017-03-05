@@ -335,7 +335,6 @@
                 .append($sliderDesc)
                 .append($sliderDesc)
                 .append($sliderClose)
-                .append($sliderPlay);
             $(document.body).append($slider);
 
             self.show();

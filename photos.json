@@ -1,31 +1,53 @@
 [{
-	"lowsrc":"photos\/thumbnails\/katya_zarubina.jpg",
-	"fullsrc":"photos\/katya_zarubina.jpg",
-	"description":"Екатерина Зарубина",
+	"lowsrc":"photos\/thumbnails\/natalya_rukol.jpg",
+	"fullsrc":"photos\/natalya_rukol.jpg",
+	"description":"Наталья Руколь",
+	"poem":"Чтоб жизнь прожить знать надобно немало!<br>Руколь Наташу слушай для начала!<br>Ведь ты, Наташа, - ум, и красота, и обаяние,<br>Ты мудрость, креативность и влияние!<br><br>И в этот день весенний я спешу желать:<br>Иметь возможность по утрам подольше спать,<br>Есть тортики, конфеты и печенья,<br>Не отказать себе в любом из развлечений.<br>И пусть на пользу будет все - и ничего во вред,<br>Пусть в нужном направлении со скидками всегда билет!<br><br>Желаю загорать у океана,<br>Желаю счет с шестью нулями минимально!<br>И продолжать вести \"Лабораторию\" к победам<br>Все лаборанты - мы тебе поможем в этом!"
+},{
+	"lowsrc":"photos\/thumbnails\/natalya_shubnikova.jpg",
+	"fullsrc":"photos\/natalya_shubnikova.jpg",
+	"description":"Наталья Шубникова",
+	"poem":"no"
+},{
+	"lowsrc":"photos\/thumbnails\/viktoria_urkevich.jpg",
+	"fullsrc":"photos\/viktoria_urkevich.jpg",
+	"description":"Виктория Юркевич",
 	"poem":"no"
 },
 {
-	"lowsrc":"photos\/thumbnails\/maria_litvinec.jpg",
-	"fullsrc":"photos\/maria_litvinec.jpg",
-	"description":"Мария Литвинец",
+	"lowsrc":"photos\/thumbnails\/ulia_mironova.jpg",
+	"fullsrc":"photos\/ulia_mironova.jpg",
+	"description":"Юлия Миронова",
 	"poem":"no"
 },
 {
-	"lowsrc":"photos\/thumbnails\/lena_egorova.jpg",
-	"fullsrc":"photos\/lena_egorova.jpg",
-	"description":"Елена Егорова",
+	"lowsrc":"photos\/thumbnails\/elena_shamhalova.jpg",
+	"fullsrc":"photos\/elena_shamhalova.jpg",
+	"description":"Елена Шамхалова",
 	"poem":"no"
 },
 {
-	"lowsrc":"photos\/thumbnails\/nastya_li.jpg",
-	"fullsrc":"photos\/nastya_li.jpg",
-	"description":"Анастасия Ли",
+	"lowsrc":"photos\/thumbnails\/natella_horoshkina.jpg",
+	"fullsrc":"photos\/natella_horoshkina.jpg",
+	"description":"Натэлла Хорошкина",
 	"poem":"no"
 },
 {
-	"lowsrc":"photos\/thumbnails\/oksana_razina.jpg",
-	"fullsrc":"photos\/oksana_razina.jpg",
-	"description":"Оксана Разина",
+	"lowsrc":"photos\/thumbnails\/elena_galstyan.jpg",
+	"fullsrc":"photos\/elena_galstyan.jpg",
+	"description":"Елена Галстян",
+	"poem":"no"
+},
+{
+	"lowsrc":"photos\/thumbnails\/ajana_nurgalieva.jpg",
+	"fullsrc":"photos\/ajana_nurgalieva.jpg",
+	"description":"Айжана Нургалиева",
+	"poem":"no"
+},
+{
+	"lowsrc":"photos\/thumbnails\/evgenia_kojanova.jpg",
+	"fullsrc":"photos\/evgenia_kojanova.jpg",
+	"description":"Евгения Кожанова",
 	"poem":"no"
 },
 {

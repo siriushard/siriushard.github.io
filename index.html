@@ -27,10 +27,14 @@
 
      <script>
         var sound = new Howl({
-        src: ['sounds/1.mp3'],
-        autoplay: true,
-        loop: true
-    });
+            src: ['sounds/1.mp3'],
+            autoplay: true,
+            loop: true
+        });
+
+        sound.on('end', function(){
+            sound.play();
+        });
 
         function playSound() {
             sound.play();

@@ -76,8 +76,10 @@ button::-moz-focus-inner {
 	font-family: -webkit-body;
 }
 .header-player-block p{
+	width: 300px;
 	margin: 8px 0;
 	font-size: larger;
+	text-decoration: overline;
 	transition: 0.3s ease;
 }
 .header-player-block:hover p{

@@ -37,6 +37,11 @@
                     window.mozAudioContext || 
                     window.msAudioContext);
                 web_audio_context = new contextClass();
+
+                if('webkitAudioContext' in window) {
+                    web_audio_context = new webkitAudioContext();
+                }
+
                 if (num == 4){
                     num = 1;
                 }

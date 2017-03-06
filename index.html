@@ -29,13 +29,12 @@
         var playlist = ['sounds/1.mp3', 'sounds/2.mp3', 'sounds/3.mp3'];
         var current_track_num = 1;
 
-        var sound = new Howl({src: playlist[current_track_num - 1]});
+        var sound = new Howl({
+            src: playlist[current_track_num - 1],
+            volume: 0.1
+        });
 
         sound.play();
-
-        sound.on('end', function(){
-            nextSound();
-        });
 
         function checkNextSound(type) {
             if (current_track_num == playlist.length && type == 'next'){
@@ -48,7 +47,10 @@
                 current_track_num--;
             }
 
-            sound = new Howl({src: playlist[current_track_num - 1]});
+            sound = new Howl({
+                src: playlist[current_track_num - 1],
+                volume: 0.1
+            });
         }
         function playSound() {
             sound.play();
@@ -71,6 +73,9 @@
             playSound();
         }
 
+        sound.on('end', function(){
+            nextSound();
+        });
     </script>
 </head>
 <body>

@@ -25,6 +25,32 @@ header{
 	margin-bottom: 40px;
 }
 
+button:active, button:focus {
+  outline: none;
+}
+button::-moz-focus-inner {
+  border: 0;
+}
+.big-player-button{
+	background: none;
+	color:#f8ffa2;
+	border:4px solid #f8ffa2;
+	border-radius: 25px;
+	margin-right: 8px;
+	padding: 12px 15px;
+	transition: 0.3s ease;
+	-webkit-transition: 0.3s ease;
+	cursor: pointer;
+}
+.big-player-button:disabled{
+	color:#949494;
+	border:4px solid #949494;
+	cursor: default;
+}
+.big-player-button:hover{
+	padding: 20px 23px;
+}
+
 .header-main-block{
 	background: rgb(248, 255, 162);
 	box-shadow:0px 0px 10px 1px rgb(242, 249, 161);
@@ -32,6 +58,7 @@ header{
 	margin: 0 30px 0 30px;
 	cursor: default;
 	transition: 0.4s ease-out;
+	-webkit-transition: 0.4s ease-out;
 }
 .header-main-block:hover{
 	box-shadow:0px 0px 50px 1px rgb(242, 249, 161);
@@ -39,7 +66,22 @@ header{
 
 .header-main-text{
 	font-size: 25pt;
-	margin: 10px 0 60px 0;
+	margin: 10px 0;
+}
+
+.header-player-block{
+	position: absolute;
+	float: left;
+	margin-left: 50px;
+	font-family: -webkit-body;
+}
+.header-player-block p{
+	margin: 8px 0;
+	font-size: larger;
+	transition: 0.3s ease;
+}
+.header-player-block:hover p{
+	margin-left: 20px;
 }
 
 .button{
@@ -48,6 +90,7 @@ header{
 	border-radius: 27px;
 	color: #6b6b6b;
 	transition: 0.3s ease;
+	-webkit-transition: 0.3s ease;
 }
 .button:hover{
 	padding: 24px;

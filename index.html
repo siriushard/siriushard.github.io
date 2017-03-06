@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
 	<link rel="stylesheet" href="css/jquery.galereya.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
     <script type="text/javascript">
@@ -24,13 +25,82 @@
 </head>
 <body>
     <header align="center"><center>
+        <script>
+            var web_audio_context;
+            var abuffer;
+            var source;
+
+            var num = 1;
+            var isUserStoped = false;
+
+            function init() {
+                contextClass = (window.AudioContext || 
+                    window.webkitAudioContext || 
+                    window.mozAudioContext || 
+                    window.msAudioContext);
+                web_audio_context = new contextClass();
+                if (num == 3){
+                    num = 1;
+                }
+                var theURL = '/sounds/'+ num +'.mp3';
+                num ++;
+                var xhr = new XMLHttpRequest();
+                xhr.open('GET', theURL, true);
+                xhr.responseType = 'arraybuffer';
+                xhr.onload = function(e) {
+                    finishedLoading(this.response);
+                };
+                xhr.send();
+            }
+
+            init();
+
+            function finishedLoading(arrayBuffer) {
+                web_audio_context.decodeAudioData(arrayBuffer, function(buffer) {
+                    abuffer = buffer;
+                    document.getElementById('Play').disabled = true;
+                    playSound();
+                }, function(e) {
+                    console.log('Error decoding file', e);
+                }); 
+            }
+
+            function playSound() {
+                source = web_audio_context.createBufferSource();
+                source.buffer = abuffer;
+                source.connect(web_audio_context.destination);
+                source.start(0);
+
+                source.onended = function(event) {
+                    if (!isUserStoped){
+                        init();
+                    }
+                }
+
+                document.getElementById('Play').disabled = true;
+                document.getElementById('Stop').disabled = false;
+            }
+
+            function stopSound() {
+                source.stop(0);
+                isUserStoped = true;
+
+                document.getElementById('Play').disabled = false;
+                document.getElementById('Stop').disabled = true;
+            }
+        </script>
         <img src="img/logo.png" width="40%"/><br>
-        <!--<embed src="sounds/background.mp3" autostart="true" loop="true" width="1" height="1"></embed>-->
         <div class="header-main-block">
         <span style="font-size: 38pt;">С 8 Марта, дорогие!</span>
         <p class="header-main-text">Наконец-то мы нашли повод признаться вам в том, как сильно мы вас ценим и любим. И дело тут не только в празднике 8 Марта (с которым мы, кстати, всех вас поздравляем), а в неукротимой творческой стихии, которая сподвигла нас на эти персональные авторские признания. В каждом стихотворении – частичка души автора. Не судите нас строго: мы не профессионалы в стихосложении, но любители… Мы любим вас, девушки ЛК!</p>
         </div>
-        <a class="button" href="#gallery">Перейти к стихотворениям</a></center>
+        <div class="header-player-block">
+            <p>Управление музыкой</p>
+            <button class="big-player-button" id="Play" onclick="playSound()"><i class="fa fa-play fa-2x" aria-hidden="true"></i></button><button class="big-player-button" id="Stop" onclick="stopSound()"><i class="fa fa-stop fa-2x" aria-hidden="true"></i></button>
+        </div>
+        <div style="margin-top: 72px;">
+             <a class="button" href="#gallery">Перейти к стихотворениям</a></center>
+        </div>
     </header>
 	<div id="gallery"></div>
         <script src="js/jquery.galereya.js"></script>
@@ -38,7 +108,7 @@
             $(function() {
                 $('#gallery').galereya({
                     wave: false,
-                    slideShowSpeed: 1000000,
+                    slideShowSpeed: 0,
                     load: function(next) {
                         $.getJSON('photos.json', function(data) {
                             next(data);

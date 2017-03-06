@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
-    <script src="js/AudioContextMonkeyPatch.js"></script>
+    <script src="js/howler.min.js"></script>
 
     <script type="text/javascript">
         $(function(){
@@ -26,69 +26,23 @@
     </script>
 
      <script>
-            var web_audio_context;
-            var abuffer;
-            var source;
+        var sound = new Howl({
+        src: ['sounds/1.mp3'],
+        autoplay: true,
+        loop: true
+    });
 
-            var num = 1;
-            var isUserStoped = false;
-
-            function init() {
-                web_audio_context = new AudioContext();
-                web_audio_context.createGainNode();
-
-                if (num == 4){
-                    num = 1;
-                }
-                var theURL = '/sounds/'+ num +'.mp3';
-                num ++;
-                var xhr = new XMLHttpRequest();
-                xhr.open('GET', theURL, true);
-                xhr.responseType = 'arraybuffer';
-                xhr.onload = function(e) {
-                    finishedLoading(this.response);
-                };
-                xhr.send();
-            }
-
-            init();
-
-            function finishedLoading(arrayBuffer) {
-                web_audio_context.decodeAudioData(arrayBuffer, function(buffer) {
-                    abuffer = buffer;
-                    document.getElementById('Play').disabled = true;
-                    playSound();
-                }, function(e) {
-                    console.log('Error decoding file', e);
-                }); 
-            }
-
-            function playSound() {
-                source = web_audio_context.createBufferSource();
-                source.buffer = abuffer;
-                source.connect(web_audio_context.destination);
-                
-                source.start(0);
-
-                source.onended = function(event) {
-                    if (!isUserStoped){
-                        init();
-                    }
-                }
-
-                document.getElementById('Play').disabled = true;
-                document.getElementById('Stop').disabled = false;
-            }
-
-            function stopSound() {
-                source.stop(0);
-
-                isUserStoped = true;
-
-                document.getElementById('Play').disabled = false;
-                document.getElementById('Stop').disabled = true;
-            }
-        </script>
+        function playSound() {
+            sound.play();
+            document.getElementById('Play').disabled = true;
+            document.getElementById('Stop').disabled = false;
+        }
+        function stopSound() {
+            sound.stop();
+            document.getElementById('Play').disabled = false;
+            document.getElementById('Stop').disabled = true;
+        }
+    </script>
 </head>
 <body>
     <header align="center"><center>
@@ -99,7 +53,7 @@
         </div>
         <div class="header-player-block">
             <p>Управление музыкой</p>
-            <button class="big-player-button" id="Play" onclick="playSound()"><i class="fa fa-play fa-2x" aria-hidden="true"></i></button><button class="big-player-button" id="Stop" onclick="stopSound()"><i class="fa fa-stop fa-2x" aria-hidden="true"></i></button>
+            <button class="big-player-button" id="Play" onclick="playSound()" disabled><i class="fa fa-play fa-2x" aria-hidden="true"></i></button><button class="big-player-button" id="Stop" onclick="stopSound()"><i class="fa fa-stop fa-2x" aria-hidden="true"></i></button>
         </div>
         <div style="margin-top: 72px;">
              <a class="simple-button" href="#gallery">Перейти к стихотворениям</a></center>

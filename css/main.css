@@ -84,7 +84,7 @@ button::-moz-focus-inner {
 	margin-left: 20px;
 }
 
-.button{
+.simple-button{
 	border:5px solid rgb(248, 255, 162);
 	padding: 16px;
 	border-radius: 27px;
@@ -92,7 +92,7 @@ button::-moz-focus-inner {
 	transition: 0.3s ease;
 	-webkit-transition: 0.3s ease;
 }
-.button:hover{
+.simple-button:hover{
 	padding: 24px;
 }
 

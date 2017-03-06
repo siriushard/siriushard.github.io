@@ -22,10 +22,8 @@
             }); 
         });
     </script>
-</head>
-<body>
-    <header align="center"><center>
-        <script>
+
+     <script>
             var web_audio_context;
             var abuffer;
             var source;
@@ -39,7 +37,7 @@
                     window.mozAudioContext || 
                     window.msAudioContext);
                 web_audio_context = new contextClass();
-                if (num == 3){
+                if (num == 4){
                     num = 1;
                 }
                 var theURL = '/sounds/'+ num +'.mp3';
@@ -89,6 +87,9 @@
                 document.getElementById('Stop').disabled = true;
             }
         </script>
+</head>
+<body>
+    <header align="center"><center>
         <img src="img/logo.png" width="40%"/><br>
         <div class="header-main-block">
         <span style="font-size: 38pt;">С 8 Марта, дорогие!</span>
@@ -99,7 +100,7 @@
             <button class="big-player-button" id="Play" onclick="playSound()"><i class="fa fa-play fa-2x" aria-hidden="true"></i></button><button class="big-player-button" id="Stop" onclick="stopSound()"><i class="fa fa-stop fa-2x" aria-hidden="true"></i></button>
         </div>
         <div style="margin-top: 72px;">
-             <a class="button" href="#gallery">Перейти к стихотворениям</a></center>
+             <a class="simple-button" href="#gallery">Перейти к стихотворениям</a></center>
         </div>
     </header>
 	<div id="gallery"></div>

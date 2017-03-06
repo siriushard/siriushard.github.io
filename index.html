@@ -35,6 +35,7 @@
 
             function init() {
                 web_audio_context = new AudioContext();
+                web_audio_context.createGainNode();
 
                 if (num == 4){
                     num = 1;

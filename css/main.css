@@ -148,7 +148,7 @@ button::-moz-focus-inner {
 }
 
 .galereya-poem-block{
-	margin:30px 100px 0 0;
+	margin:12px 100px 0 0;
 	width: 510px;
 	float: right;
 	font-size:30pt;
@@ -157,5 +157,5 @@ button::-moz-focus-inner {
 
 .galereya-poem-content{
 	margin:20px 0;
-	font-size: 18pt;
+	font-size: 16pt;
 }

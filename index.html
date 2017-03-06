@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
+    <script src="js/AudioContextMonkeyPatch.js"></script>
+
     <script type="text/javascript">
         $(function(){
             $('a[href^="#"]').click(function(){
@@ -24,8 +26,6 @@
     </script>
 
      <script>
-            var is_safari = navigator.userAgent.indexOf("Safari") > -1;
-
             var web_audio_context;
             var abuffer;
             var source;
@@ -34,11 +34,7 @@
             var isUserStoped = false;
 
             function init() {
-                contextClass = (window.AudioContext || 
-                    window.webkitAudioContext || 
-                    window.mozAudioContext || 
-                    window.msAudioContext);
-                web_audio_context = new contextClass();
+                web_audio_context = new AudioContext();
 
                 if (num == 4){
                     num = 1;
@@ -72,9 +68,6 @@
                 source.connect(web_audio_context.destination);
                 
                 source.start(0);
-                if (is_safari){
-                    source.noteOn(0);
-                }
 
                 source.onended = function(event) {
                     if (!isUserStoped){
@@ -88,9 +81,6 @@
 
             function stopSound() {
                 source.stop(0);
-                if (is_safari){
-                    source.noteOff(0);
-                }
 
                 isUserStoped = true;
 

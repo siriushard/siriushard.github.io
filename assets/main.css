@@ -1,0 +1,50 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    cursor: url(graphics/cursor/default.png) 4 1, default;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url(graphics/backgrounds/background-main.jpg) no-repeat center;
+    background-size: cover;
+}
+
+#mainView {
+    overflow: hidden;
+    position: relative;
+    background-color: black;
+    width: 1280px;
+    height: 768px;
+    border-radius: 10px;
+}
+
+#sceneView {
+    background-size: cover !important;
+    height: 100%;
+    width: 100%;
+    filter: blur(0);
+    -webkit-filter: blur(0);
+    transition: all 0.5s ease;
+}
+
+#sceneView.blurred {
+    filter: blur(10px);
+    -webkit-filter: blur(10px);
+}
+
+#controlPanelView {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+#sceneView[data-scene="doorstep"] {
+    background: url(graphics/scenes/doorstep.jpg) no-repeat center;
+}

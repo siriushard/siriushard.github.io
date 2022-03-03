@@ -45,6 +45,3 @@ body {
     left: 0;
     right: 0;
 }
-#sceneView[data-scene="doorstep"] {
-    background: url(graphics/scenes/doorstep.jpg) no-repeat center;
-}

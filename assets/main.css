@@ -135,7 +135,7 @@ button:focus { outline: none; }
 
 .btn-item_mover { position: absolute; }
 .btn-item_mover.mover_left { cursor: url(graphics/cursor/mover_left.png) 4 1, default; }
-.btn-item_mover.mover_right { cursor: url(graphics/cursor/mover_left.png) 4 1, default; }
+.btn-item_mover.mover_right { cursor: url(graphics/cursor/mover_right.png) 4 1, default; }
 .btn-item_mover.mover_forward { cursor: url(graphics/cursor/mover_forward.png) 4 1, default; }
 .btn-item_mover.mover_backward { cursor: url(graphics/cursor/mover_backward.png) 4 1, default; }
 

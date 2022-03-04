@@ -139,6 +139,28 @@
                 "left" : "93px",
                 "top" : "238px"
               }
+            },
+            {
+              "type": "right",
+              "target" : "hallway-right",
+              "soundClicked" : "footsteps.wav",
+              "position" : {
+                "width" : "124px",
+                "height" : "166px",
+                "left" : "1073px",
+                "top" : "304px"
+              }
+            },
+            {
+              "type": "backward",
+              "target" : "doorstep",
+              "soundClicked" : "openDoor.ogg",
+              "position" : {
+                "width" : "429px",
+                "height" : "107px",
+                "left" : "459px",
+                "top" : "664px"
+              }
             }
           ],
           "objects": [
@@ -324,7 +346,124 @@
           "background" : "hallway_red_cleaned.jpg",
           "dialogBefore" : [],
           "dialogAfter": [],
-          "musicBackground" : "hallway_left_bug.mp3",
+          "musicBackground" : "hallway_left_cleaned.mp3",
+          "soundAfterStage" : "",
+          "movers" : [
+            {
+              "type" : "backward",
+              "target": "mainhall",
+              "soundClicked": "footsteps.wav",
+              "position": {
+                "width": "618px",
+                "height": "120px",
+                "left": "342px",
+                "top": "650px"
+              }
+            }
+          ],
+          "objects": []
+        }
+      ]
+    },
+    {
+      "name" : "hallway-right",
+      "stages" : [
+        {
+          "name" : 0,
+          "background" : "hallway_blue_bug.jpg",
+          "dialogBefore" : [],
+          "dialogAfter": [],
+          "musicBackground" : "hallway_right_bug.mp3",
+          "soundAfterStage" : "cleanedMagic.ogg",
+          "objects": [
+            {
+              "target" : "Огрызок яблока",
+              "image" : "apple-stump.png",
+              "position" : {
+                "width" : "27px",
+                "height" : "39px",
+                "left" : "389px",
+                "top" : "544px"
+              }
+            },
+            {
+              "target" : "Муха",
+              "image" : "fly.png",
+              "position" : {
+                "width" : "30px",
+                "height" : "38px",
+                "left" : "249px",
+                "top" : "276px"
+              }
+            },
+            {
+              "target" : "Ящерица",
+              "image" : "lizard.png",
+              "position" : {
+                "width" : "52px",
+                "height" : "90px",
+                "left" : "332px",
+                "top" : "372px"
+              }
+            },
+            {
+              "target" : "Мышь",
+              "image" : "mouse.png",
+              "position" : {
+                "width" : "28px",
+                "height" : "38px",
+                "left" : "888px",
+                "top" : "441px"
+              }
+            },
+            {
+              "target" : "Яд",
+              "image" : "poison.png",
+              "position" : {
+                "width" : "19px",
+                "height" : "44px",
+                "left" : "309px",
+                "top" : "358px"
+              }
+            },
+            {
+              "target" : "Паук",
+              "image" : "spider.png",
+              "position" : {
+                "width" : "28px",
+                "height" : "38px",
+                "left" : "670px",
+                "top" : "425px"
+              }
+            },
+            {
+              "target" : "Червяк",
+              "image" : "worm.png",
+              "position" : {
+                "width" : "28px",
+                "height" : "38px",
+                "left" : "553px",
+                "top" : "467px"
+              }
+            },
+            {
+              "target" : "Улитка",
+              "image" : "snail.png",
+              "position" : {
+                "width" : "34px",
+                "height" : "24px",
+                "left" : "951px",
+                "top" : "400px"
+              }
+            }
+          ]
+        },
+        {
+          "name" : 1,
+          "background" : "hallway_blue_cleaned.jpg",
+          "dialogBefore" : [],
+          "dialogAfter": [],
+          "musicBackground" : "hallway_right_cleaned.mp3",
           "soundAfterStage" : "",
           "movers" : [
             {

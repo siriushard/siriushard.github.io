@@ -1,15 +1,118 @@
 {
   "defaultLocation" : "doorstep",
-  "locations" : {
-    "doorstep" : {
-      "defaultStage" : "1",
-      "stages" : {
-        "1" : {
-          "background" : "/assets/graphics/locations/doorstep.jpg",
-          "dialogBefore" : ["Привет, как доехала? Вижу, что ты взволнована. Сейчас все расскажу.", "Наши ребята из Лаборатории Качества привезли сундук с каким-то сокровщием. Чтобы открыть, нужно найти части ключей.", "Сделать это очень не так просто, но я уверен, что у тебя все получится."],
-          "dialogAfter": ""
+  "locations" : [
+    {
+      "name" : "doorstep",
+      "stages" : [
+        {
+          "name" : "1",
+          "background" : "doorstep.jpg",
+          "dialogBefore" : ["Привет, как доехала? Я Серёжа Ми. Покажу тебе дом и помогу с загадками. Вижу, что ты взволнована. Сейчас все расскажу.", "Наши ребята из Лаборатории Качества привезли сундук с каким-то сокровщием. К сожалению ключ был поломан и его кусочки разбросаны по дому и тебе предстоит их найти.", "Сделать это очень не просто, но я уверен, что у тебя все получится."],
+          "dialogAfter": [],
+          "items": [
+            {
+              "type": "location",
+              "target" : "mainhall",
+              "image" : "",
+              "position" : {
+                "width" : "85px",
+                "height" : "320px",
+                "left" : "556px",
+                "top" : "37px"
+              }
+            }
+          ],
+          "miniGame" : []
         }
-      }
+      ]
+    },
+    {
+      "name" : "mainhall",
+      "stages" : [
+        {
+          "number" : 0,
+          "background" : "mainhall_bug.jpg",
+          "dialogBefore" : ["Так, так, так. Смотри какой беспорядок.", "Надеюсь, тут не приведений. Давай приберемся слегка, чтобы проще было искать нужные вещи.", "Для начала найдем все баги и тогда можно будет исследовать дом. За дело!"],
+          "dialogAfter": ["Отличная работа!"],
+          "items": [
+            {
+              "type": "object",
+              "target" : "Огрызок яблока",
+              "image" : "apple-stump.png",
+              "position" : {
+                "width" : "27px",
+                "height" : "39px",
+                "left" : "389px",
+                "top" : "544px"
+              }
+            },
+            {
+              "type": "object",
+              "target" : "Муха",
+              "image" : "fly.png",
+              "position" : {
+                "width" : "28px",
+                "height" : "38px",
+                "left" : "249px",
+                "top" : "225px"
+              }
+            },
+            {
+              "type": "object",
+              "target" : "Ящерица",
+              "image" : "lizard.png",
+              "position" : {
+                "width" : "52px",
+                "height" : "90px",
+                "left" : "332px",
+                "top" : "269px"
+              }
+            },
+            {
+              "type": "object",
+              "target" : "Мышь",
+              "image" : "mouse.png",
+              "position" : {
+                "width" : "28px",
+                "height" : "38px",
+                "left" : "888px",
+                "top" : "268px"
+              }
+            },
+            {
+              "type": "object",
+              "target" : "Яд",
+              "image" : "poison.png",
+              "position" : {
+                "width" : "19px",
+                "height" : "44px",
+                "left" : "309px",
+                "top" : "153px"
+              }
+            },
+            {
+              "type": "object",
+              "target" : "Паук",
+              "image" : "spider.png",
+              "position" : {
+                "width" : "28px",
+                "height" : "38px",
+                "left" : "670px",
+                "top" : "177px"
+              }
+            }
+          ],
+          "miniGame" : ["Огрызок яблока", "Ящерица", "Яд"]
+        },
+        {
+          "number" : 1,
+          "background" : "mainhall_cleaned.jpg",
+          "dialogBefore" : ["Ой, какая ты молодец. Смотри какая чистота теперь в помещении.", "Теперь давай поищем остальные предметы, может найдём часть ключа?"],
+          "dialogAfter": [],
+          "items": [],
+          "miniGame" : []
+        }
+      ]
     }
-  }
+  ]
 }

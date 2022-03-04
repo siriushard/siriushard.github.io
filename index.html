@@ -1,4 +1,4 @@
-<!-- Developed By Sergey Mironenko. Graphic extracted from game Crystals of Time and used for noncommercial project as gift  -->
+<!-- Game developed By Sergey Mironenko. Graphic extracted from game Crystals of Time and used for noncommercial project as gift  -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,14 +9,32 @@
 
     <link rel="icon" href="favicon.ico" />
     <link rel="stylesheet" href="assets/main.css">
+    <link rel="stylesheet" href="assets/plugin/jquery-ui/jquery-ui.min.css">
     <script src="assets/plugin/jquery/jquery-3.6.0.min.js"></script>
-    <script src="assets/main.js"></script>
+    <script src="assets/plugin/jquery-ui/jquery-ui.min.js"></script>
+    <script src="assets/particles.js"></script>
 </head>
 <body>
-    <div id="mainView">
-        <div id="sceneView" class="">
-
+    <div id="mainView" data-game-status="unloaded">
+        <div id="menuView">
+            <button id="btn-play" class="menu-button">Играть</button>
+        </div>
+        <div id="locationView"></div>
+        <div id="dialogView">
+            <div id="dialogViewContent"></div>
+            <button id="btn-dialog-continue">Дальше</button>
+        </div>
+        <div id="dialogCharacterView"></div>
+        <div id="navigationView">
+            <div id="btn-navigation-toggle"></div>
+            <div id="navigationContentView">
+                <div>Яблоко</div>
+                <div>Ящерица</div>
+                <div>Яд</div>
+            </div>
         </div>
     </div>
+
+    <script src="assets/main.js"></script>
 </body>
 </html>

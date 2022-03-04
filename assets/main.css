@@ -127,14 +127,21 @@ button:focus { outline: none; }
     -webkit-filter: blur(10px);
 }
 
-.btn-item_location {
-    position: absolute;
-    cursor: url(graphics/cursor/location.png) 4 1, default;
+#locationItemsView {
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
+
+.btn-item_mover { position: absolute; }
+.btn-item_mover.mover_left { cursor: url(graphics/cursor/mover_left.png) 4 1, default; }
+.btn-item_mover.mover_right { cursor: url(graphics/cursor/mover_left.png) 4 1, default; }
+.btn-item_mover.mover_forward { cursor: url(graphics/cursor/mover_forward.png) 4 1, default; }
+.btn-item_mover.mover_backward { cursor: url(graphics/cursor/mover_backward.png) 4 1, default; }
 
 .btn-item_object {
     position: absolute;
-    background-size: cover !important;
+    background-size: contain !important;
     background-repeat: no-repeat !important;
     background-position: center !important;
 }
@@ -215,6 +222,10 @@ button:focus { outline: none; }
     margin-bottom: 10px;
     padding-bottom: 10px;
     border-bottom: 1px dashed;
+}
+
+#navigationContentView div.success {
+    text-decoration: line-through;
 }
 
 #navigationContentView div:last-child {

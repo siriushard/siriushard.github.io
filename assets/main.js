@@ -1,5 +1,70 @@
 let gameStarted = false;
 
+//#region Draggable
+document.addEventListener('keydown', function(event) {
+    if (event.code == 'KeyZ') {
+        console.log('Включаем режим перемещения объектов')
+        $('.draggable').each(function () {
+            draggable($(this));
+        })
+    }
+
+    // if (event.code == 'KeyX') {
+    //     console.log('Включаем режим изменения размеров объектов')
+    //     $('.draggable').resizable();
+    // }
+});
+
+
+function draggable($item) {
+    let item = $item[0];
+
+    item.onmousedown = function(event) {
+
+        let shiftX = event.clientX - item.getBoundingClientRect().left;
+        let shiftY = event.clientY - item.getBoundingClientRect().top;
+
+        item.style.position = 'absolute';
+        item.style.zIndex = 1000;
+        document.body.append(item);
+
+        moveAt(event.pageX, event.pageY);
+
+        // moves the ball at (pageX, pageY) coordinates
+        // taking initial shifts into account
+        function moveAt(pageX, pageY) {
+            item.style.left = pageX - shiftX + 'px';
+            item.style.top = pageY - shiftY + 'px';
+        }
+
+        function onMouseMove(event) {
+            moveAt(event.pageX, event.pageY);
+        }
+
+        // move the ball on mousemove
+        document.addEventListener('mousemove', onMouseMove);
+
+        // drop the ball, remove unneeded handlers
+        item.onmouseup = function() {
+            document.removeEventListener('mousemove', onMouseMove);
+            item.onmouseup = null;
+            $locationView.append($(item));
+
+            let $body = $('body');
+            let topOffset = ($body.outerHeight() - $locationView.outerHeight()) / 2;
+            let leftOffset = ($body.outerWidth() - $locationView.outerWidth()) / 2;
+            $item.css('top', `-=${topOffset}`);
+            $item.css('left', `-=${leftOffset}`);
+        };
+
+    };
+
+    item.ondragstart = function() {
+        return false;
+    };
+}
+//#endregion
+
 //#region Game Data
 let gameDataPath = "/assets/game.json";
 let gameData;
@@ -48,6 +113,7 @@ function hideMenu() {
 let $locationView = $('#locationView');
 let currentLocationIndex, currentLocation;
 let currentStageIndex, currentStage;
+let musicStage;
 
 const STAGE_PHASES = {
     DIALOG_BEFORE : 'DIALOG_BEFORE',
@@ -64,7 +130,11 @@ function changeLocation(locationName) {
     currentLocationIndex = gameData.locations.findIndex(location => location.name === locationName);
     currentLocation = gameData.locations[currentLocationIndex];
 
-    changeStage(currentLocation, 0);
+    if (finishedLocations.indexOf(currentLocation.name) === -1) {
+        changeStage(currentLocation, 0);
+    } else {
+        changeStage(currentLocation, currentLocation.stages.length - 1);
+    }
 }
 
 function changeStage(location, stageIndex, stageName) {
@@ -75,34 +145,50 @@ function changeStage(location, stageIndex, stageName) {
 
     $locationView.html('');
     $locationView.css("background-image", `url(assets/graphics/locations/${currentStage.background})`);
-    currentStage.items.forEach(function (item) {
-        let $item = $(`<div class="btn-item_${item.type} draggable" data-item-target="${item.target}"></div>`);
-        $item.css(item.position);
-        if (item.type === 'object') {
-            $item.css('background-image', `url(assets/graphics/items/${item.image})`);
+
+    if (typeof currentStage.movers !== "undefined") {
+        currentStage.movers.forEach(function (mover) {
+            let $mover = $(`<div class="btn-item_mover mover_${mover.type} draggable" data-mover-target="${mover.target}" data-mover-sound="${mover.soundClicked}"></div>`);
+            $mover.appendTo($locationView);
+            $mover.css(mover.position);
+        });
+    }
+
+    if (finishedLocations.indexOf(currentLocation.name) === -1) {
+        if (typeof currentStage.objects !== "undefined") {
+            currentStage.objects.forEach(function (object) {
+                let $object = $(`<div class="btn-item_object draggable" data-object-target="${object.target}"></div>`);
+                $object.css(object.position);
+                miniGameFeed.push(object.target);
+                $object.css('background-image', `url(assets/graphics/items/${object.image})`);
+                $object.appendTo($locationView);
+            });
         }
-        $item.appendTo($locationView);
-    });
-
-    miniGameFeed = currentStage.miniGame;
-    updateNavigation();
-
-    // ЗАКОММЕНТИРОВАТЬ ПОСЛЕ РЕЛИЗА
-    $('.draggable').draggable().resizable();
-    // -----------------------------
+    }
 
     setTimeout(function blurring() {
         $locationView.removeClass("blurred");
 
-        if (currentStage.dialogBefore.length !== 0) {
-            setTimeout(function blurring() {
-                stagePhase = STAGE_PHASES.DIALOG_BEFORE;
-                showDialog(currentStage.dialogBefore);
-            }, 200);
-        } else if (currentStage.miniGame.length !== 0) {
+        if (typeof musicStage !== "undefined") {
+            musicStage.pause();
+        }
 
-        } else if (currentStage.dialogAfter.length !== 0) {
+        if (typeof currentStage.musicBackground !== "undefined" && currentStage.musicBackground !== "") {
+            musicStage = new Audio(`/assets/music/${currentStage.musicBackground}`);
+            musicStage.play();
+        }
 
+        if (finishedLocations.indexOf(currentLocation.name) === -1) {
+            stagePhase = STAGE_PHASES.DIALOG_BEFORE;
+            if (currentStage.dialogBefore.length !== 0) {
+                setTimeout(function blurring() {
+                    showDialog(currentStage.dialogBefore);
+                }, 200);
+            } else {
+                nextPhase();
+            }
+        } else {
+            stagePhase = STAGE_PHASES.FINISHED;
         }
     }, 400);
 }
@@ -117,10 +203,12 @@ function nextStage() {
 
 function nextPhase() {
     if (stagePhase === STAGE_PHASES.DIALOG_BEFORE) {
-        if (currentStage.miniGame.length === 0) {
+        if (currentStage.objects.length === 0) {
             stagePhase = STAGE_PHASES.FINISHED;
+            nextPhase();
         } else {
             stagePhase = STAGE_PHASES.MINI_GAME;
+            updateNavigation();
             showNavigation();
         }
     } else if (stagePhase === STAGE_PHASES.MINI_GAME) {
@@ -137,25 +225,39 @@ function nextPhase() {
         stagePhase = STAGE_PHASES.FINISHED;
         nextPhase();
     } else if (stagePhase === STAGE_PHASES.FINISHED) {
-        finishedLocations.push(currentLocation.name);
+        console.log('32')
+        if (currentStageIndex === currentLocation.stages.length - 1) {
+            finishedLocations.push(currentLocation.name);
+        }
+        if (typeof currentStage.soundAfterStage !== "undefined" && currentStage.soundAfterStage !== "") {
+            let audio = new Audio(`/assets/sounds/${currentStage.soundAfterStage}`);
+            audio.play();
+        }
         nextStage();
     }
 }
 
-$locationView.on('click', '.btn-item_location', function () {
+$locationView.on('click', '.btn-item_mover', function () {
     if (stagePhase === STAGE_PHASES.FINISHED) {
-        changeLocation($(this).attr('data-item-target'));
+        changeLocation($(this).attr('data-mover-target'));
+
+        if ($(this).attr('data-mover-sound') !== "") {
+            let audio = new Audio(`/assets/sounds/${$(this).attr('data-mover-sound')}`);
+            audio.play();
+        }
     }
 });
 
 $locationView.on('click', '.btn-item_object', function () {
     if (stagePhase === STAGE_PHASES.MINI_GAME) {
-        let miniGameFeedObjectIndex = miniGameFeed.findIndex(item => item === $(this).attr('data-item-target'));
+        let miniGameFeedObjectIndex = miniGameFeed.findIndex(item => item === $(this).attr('data-object-target'));
         if (miniGameFeedObjectIndex !== -1) {
             miniGameFeed.splice(miniGameFeedObjectIndex, 1);
+            $(this).remove();
+            $navigationContentView.find(`[data-navigation-object-name="${$(this).attr('data-object-target')}"]`).addClass('success');
+            let audio = new Audio('/assets/sounds/journalAddNote.ogg');
+            audio.play();
         }
-
-        updateNavigation();
 
         if (miniGameFeed.length === 0) {
             nextPhase();
@@ -171,8 +273,8 @@ let $btnNavigationToggle = $('#btn-navigation-toggle');
 
 function updateNavigation() {
     $navigationContentView.html('');
-    miniGameFeed.forEach(function (item) {
-        $(`<div>${item}</div>`).appendTo($navigationContentView);
+    miniGameFeed.forEach(function (object) {
+        $(`<div data-navigation-object-name="${object}">${object}</div>`).appendTo($navigationContentView);
     });
 }
 

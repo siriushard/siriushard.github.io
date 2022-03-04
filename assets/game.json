@@ -5,15 +5,17 @@
       "name" : "doorstep",
       "stages" : [
         {
-          "name" : "1",
+          "name" : 0,
           "background" : "doorstep.jpg",
           "dialogBefore" : ["Привет, как доехала? Я Серёжа Ми. Покажу тебе дом и помогу с загадками. Вижу, что ты взволнована. Сейчас все расскажу.", "Наши ребята из Лаборатории Качества привезли сундук с каким-то сокровщием. К сожалению ключ был поломан и его кусочки разбросаны по дому и тебе предстоит их найти.", "Сделать это очень не просто, но я уверен, что у тебя все получится."],
           "dialogAfter": [],
-          "items": [
+          "musicBackground" : "doorstep.mp3",
+          "soundAfterStage" : "",
+          "movers" : [
             {
-              "type": "location",
+              "type": "forward",
               "target" : "mainhall",
-              "image" : "",
+              "soundClicked" : "openDoor.ogg",
               "position" : {
                 "width" : "85px",
                 "height" : "320px",
@@ -22,7 +24,7 @@
               }
             }
           ],
-          "miniGame" : []
+          "objects": []
         }
       ]
     },
@@ -33,10 +35,11 @@
           "number" : 0,
           "background" : "mainhall_bug.jpg",
           "dialogBefore" : ["Так, так, так. Смотри какой беспорядок.", "Надеюсь, тут не приведений. Давай приберемся слегка, чтобы проще было искать нужные вещи.", "Для начала найдем все баги и тогда можно будет исследовать дом. За дело!"],
-          "dialogAfter": ["Отличная работа!"],
-          "items": [
+          "dialogAfter": [],
+          "musicBackground" : "mainhall_bug.mp3",
+          "soundAfterStage" : "cleanedMagic.ogg",
+          "objects": [
             {
-              "type": "object",
               "target" : "Огрызок яблока",
               "image" : "apple-stump.png",
               "position" : {
@@ -47,70 +50,296 @@
               }
             },
             {
-              "type": "object",
               "target" : "Муха",
               "image" : "fly.png",
               "position" : {
-                "width" : "28px",
+                "width" : "30px",
                 "height" : "38px",
                 "left" : "249px",
-                "top" : "225px"
+                "top" : "276px"
               }
             },
             {
-              "type": "object",
               "target" : "Ящерица",
               "image" : "lizard.png",
               "position" : {
                 "width" : "52px",
                 "height" : "90px",
                 "left" : "332px",
-                "top" : "269px"
+                "top" : "372px"
               }
             },
             {
-              "type": "object",
               "target" : "Мышь",
               "image" : "mouse.png",
               "position" : {
                 "width" : "28px",
                 "height" : "38px",
                 "left" : "888px",
-                "top" : "268px"
+                "top" : "441px"
               }
             },
             {
-              "type": "object",
               "target" : "Яд",
               "image" : "poison.png",
               "position" : {
                 "width" : "19px",
                 "height" : "44px",
                 "left" : "309px",
-                "top" : "153px"
+                "top" : "358px"
               }
             },
             {
-              "type": "object",
               "target" : "Паук",
               "image" : "spider.png",
               "position" : {
                 "width" : "28px",
                 "height" : "38px",
                 "left" : "670px",
-                "top" : "177px"
+                "top" : "425px"
+              }
+            },
+            {
+              "target" : "Червяк",
+              "image" : "worm.png",
+              "position" : {
+                "width" : "28px",
+                "height" : "38px",
+                "left" : "553px",
+                "top" : "467px"
+              }
+            },
+            {
+              "target" : "Улитка",
+              "image" : "snail.png",
+              "position" : {
+                "width" : "34px",
+                "height" : "24px",
+                "left" : "951px",
+                "top" : "400px"
               }
             }
-          ],
-          "miniGame" : ["Огрызок яблока", "Ящерица", "Яд"]
+          ]
         },
         {
           "number" : 1,
           "background" : "mainhall_cleaned.jpg",
+          "musicBackground" : "mainhall_cleaned.mp3",
+          "soundAfterStage" : "",
           "dialogBefore" : ["Ой, какая ты молодец. Смотри какая чистота теперь в помещении.", "Теперь давай поищем остальные предметы, может найдём часть ключа?"],
           "dialogAfter": [],
-          "items": [],
-          "miniGame" : []
+          "movers" : [
+            {
+              "type": "left",
+              "target" : "hallway-left",
+              "soundClicked" : "footsteps.wav",
+              "position" : {
+                "width" : "85px",
+                "height" : "268px",
+                "left" : "93px",
+                "top" : "238px"
+              }
+            }
+          ],
+          "objects": [
+            {
+              "target": "Шляпа",
+              "image": "hat.png",
+              "position": {
+                "width": "58px",
+                "height": "66px",
+                "left": "437px",
+                "top": "264px"
+              }
+            },
+            {
+              "target": "Кегля",
+              "image": "skittle.png",
+              "position": {
+                "width": "59px",
+                "height": "33px",
+                "left": "620px",
+                "top": "194px"
+              }
+            },
+            {
+              "target": "Клубок ниток",
+              "image": "clew.png",
+              "position": {
+                "width": "32px",
+                "height": "38px",
+                "left": "656px",
+                "top": "461px"
+              }
+            },
+            {
+              "target": "Музыкальный барабан",
+              "image": "drum.png",
+              "position": {
+                "width": "129px",
+                "height": "89px",
+                "left": "46px",
+                "top": "483px"
+              }
+            },
+            {
+              "target": "Шишка",
+              "image": "pinecone.png",
+              "position": {
+                "width": "34px",
+                "height": "38px",
+                "left": "407px",
+                "top": "112px"
+              }
+            },
+            {
+              "target": "Боксёрские перчатки",
+              "image": "box_gloves.png",
+              "position": {
+                "width": "72px",
+                "height": "42px",
+                "left": "829px",
+                "top": "152px"
+              }
+            },
+            {
+              "target": "Фляга",
+              "image": "flask.png",
+              "position": {
+                "width": "46px",
+                "height": "53px",
+                "left": "898px",
+                "top": "496px"
+              }
+            },
+            {
+              "target": "Подкова",
+              "image": "horseshoe.png",
+              "position": {
+                "width": "54px",
+                "height": "54px",
+                "left": "649px",
+                "top": "276px"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name" : "hallway-left",
+      "stages" : [
+        {
+          "name" : 0,
+          "background" : "hallway_red_bug.jpg",
+          "dialogBefore" : [],
+          "dialogAfter": [],
+          "musicBackground" : "hallway_left_bug.mp3",
+          "soundAfterStage" : "cleanedMagic.ogg",
+          "objects": [
+            {
+              "target" : "Огрызок яблока",
+              "image" : "apple-stump.png",
+              "position" : {
+                "width" : "27px",
+                "height" : "39px",
+                "left" : "389px",
+                "top" : "544px"
+              }
+            },
+            {
+              "target" : "Муха",
+              "image" : "fly.png",
+              "position" : {
+                "width" : "30px",
+                "height" : "38px",
+                "left" : "249px",
+                "top" : "276px"
+              }
+            },
+            {
+              "target" : "Ящерица",
+              "image" : "lizard.png",
+              "position" : {
+                "width" : "52px",
+                "height" : "90px",
+                "left" : "332px",
+                "top" : "372px"
+              }
+            },
+            {
+              "target" : "Мышь",
+              "image" : "mouse.png",
+              "position" : {
+                "width" : "28px",
+                "height" : "38px",
+                "left" : "888px",
+                "top" : "441px"
+              }
+            },
+            {
+              "target" : "Яд",
+              "image" : "poison.png",
+              "position" : {
+                "width" : "19px",
+                "height" : "44px",
+                "left" : "309px",
+                "top" : "358px"
+              }
+            },
+            {
+              "target" : "Паук",
+              "image" : "spider.png",
+              "position" : {
+                "width" : "28px",
+                "height" : "38px",
+                "left" : "670px",
+                "top" : "425px"
+              }
+            },
+            {
+              "target" : "Червяк",
+              "image" : "worm.png",
+              "position" : {
+                "width" : "28px",
+                "height" : "38px",
+                "left" : "553px",
+                "top" : "467px"
+              }
+            },
+            {
+              "target" : "Улитка",
+              "image" : "snail.png",
+              "position" : {
+                "width" : "34px",
+                "height" : "24px",
+                "left" : "951px",
+                "top" : "400px"
+              }
+            }
+          ]
+        },
+        {
+          "name" : 1,
+          "background" : "hallway_red_cleaned.jpg",
+          "dialogBefore" : [],
+          "dialogAfter": [],
+          "musicBackground" : "hallway_left_bug.mp3",
+          "soundAfterStage" : "",
+          "movers" : [
+            {
+              "type" : "backward",
+              "target": "mainhall",
+              "soundClicked": "footsteps.wav",
+              "position": {
+                "width": "618px",
+                "height": "120px",
+                "left": "342px",
+                "top": "650px"
+              }
+            }
+          ],
+          "objects": []
         }
       ]
     }

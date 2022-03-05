@@ -274,3 +274,26 @@ button:focus { outline: none; }
     background: url(graphics/gui/key.png) no-repeat center;
     background-size: contain;
 }
+
+#journalView {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 540px;
+    background: url(graphics/gui/book_half.png) no-repeat center;
+    background-size: contain;
+    z-index: 90;
+}
+
+#journalContentView {
+    position: absolute;
+    font-family: Caveat, sans-serif;
+    font-size: 24px;
+    top: 78px;
+    bottom: 20px;
+    left: 11px;
+    right: 126px;
+    color: black;
+}

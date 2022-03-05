@@ -98,7 +98,7 @@ function showMenu() {
     if (gameStarted) {
         $btnPlay.text('Продолжить');
     } else {
-        $btnPlay.text('Новая игра');
+        $btnPlay.text('Начать игру');
     }
 
     $menuView.fadeIn('slow');
@@ -124,7 +124,7 @@ const STAGE_PHASES = {
 let stagePhase;
 
 let finishedLocations = [];
-let keyPartsNeed = 1;
+let keyPartsNeed = 3;
 let keyParts = 0;
 let miniGameFeed = [];
 
@@ -150,7 +150,7 @@ function changeStage(location, stageIndex, stageName) {
 
     if (typeof currentStage.journals !== "undefined") {
         currentStage.journals.forEach(function (journal) {
-            let $journal = $(`<div class="btn-item_journal draggable" data-mover-target="${journal.target}"></div>`);
+            let $journal = $(`<div class="btn-item_journal draggable" data-mover-target="${journal.target}"><div style="display: none">${journal.content}</div></div>`);
             $journal.appendTo($locationView);
             $journal.css(journal.position);
             $journal.css('background-image', `url(assets/graphics/items/${journal.image})`);
@@ -263,6 +263,9 @@ $locationView.on('click', '.btn-item_journal', function () {
     if (stagePhase === STAGE_PHASES.FINISHED) {
         let audio = new Audio(`/assets/sounds/openJournal.ogg`);
         audio.play();
+
+        $journalContentView.html($(this).find('div').html());
+        $journalView.show('slow');
     }
 });
 
@@ -300,6 +303,10 @@ let $navigationView = $('#navigationView');
 let $navigationContentView = $('#navigationContentView');
 let $btnNavigationToggle = $('#btn-navigation-toggle');
 let $navigationKeyContainerView = $('#navigationKeyContainerView');
+
+let $journalView = $("#journalView");
+let $journalContentView = $("#journalContentView");
+$journalView.hide();
 
 function updateNavigation() {
     $navigationContentView.html('');

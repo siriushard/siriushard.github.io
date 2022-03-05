@@ -365,10 +365,17 @@ function nextMessage() {
     $dialogViewContent.fadeIn( "fast");
 }
 
+let blockDialog = false;
 $dialogView.on('click', function () {
+    if (blockDialog) return false;
+
     if (dialogFeed.length === 0) {
+        blockDialog = true;
         hideDialog();
         nextPhase();
+        setTimeout(function blurring() {
+            blockDialog = false;
+        }, 200);
         return false;
     }
 

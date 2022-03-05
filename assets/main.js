@@ -124,7 +124,7 @@ const STAGE_PHASES = {
 let stagePhase;
 
 let finishedLocations = [];
-let keyPartsNeed = 3;
+let keyPartsNeed = 1;
 let keyParts = 0;
 let miniGameFeed = [];
 

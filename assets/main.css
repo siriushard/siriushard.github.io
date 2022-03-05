@@ -281,8 +281,8 @@ button:focus { outline: none; }
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 540px;
-    background: url(graphics/gui/book_half.png) no-repeat center;
+    width: 1100px;
+    background: url(graphics/gui/book.png) no-repeat center;
     background-size: contain;
     z-index: 90;
 }
@@ -290,10 +290,10 @@ button:focus { outline: none; }
 #journalContentView {
     position: absolute;
     font-family: Caveat, sans-serif;
-    font-size: 24px;
+    font-size: 25px;
     top: 78px;
     bottom: 20px;
-    left: 11px;
-    right: 126px;
+    left: 63px;
+    right: 577px;
     color: black;
 }

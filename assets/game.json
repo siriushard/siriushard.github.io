@@ -496,10 +496,10 @@
               "target": "bedroom",
               "soundClicked": "openDoor.ogg",
               "position": {
-                "width": "618px",
-                "height": "120px",
-                "left": "342px",
-                "top": "650px"
+                "width": "136px",
+                "height": "515px",
+                "left": "321px",
+                "top": "89px"
               }
             }
           ],
@@ -597,28 +597,28 @@
               "position" : {
                 "width" : "28px",
                 "height" : "33px",
-                "left" : "521px",
-                "top" : "244px"
+                "left" : "533px",
+                "top" : "183px"
               }
             },
             {
               "target" : "Ящерица",
               "image" : "lizard.png",
               "position" : {
-                "width" : "33px",
-                "height" : "53px",
-                "left" : "808px",
-                "top" : "253px"
+                "width" : "47px",
+                "height" : "78px",
+                "left" : "59px",
+                "top" : "301px"
               }
             },
             {
               "target" : "Мышь",
               "image" : "mouse.png",
               "position" : {
-                "width" : "28px",
-                "height" : "38px",
-                "left" : "1019px",
-                "top" : "530px"
+                "width" : "34px",
+                "height" : "41px",
+                "left" : "482px",
+                "top" : "444px"
               }
             },
             {
@@ -627,18 +627,18 @@
               "position" : {
                 "width" : "37px",
                 "height" : "42px",
-                "left" : "721px",
-                "top" : "122px"
+                "left" : "743px",
+                "top" : "648px"
               }
             },
             {
               "target" : "Червяк",
               "image" : "worm.png",
               "position" : {
-                "width" : "28px",
-                "height" : "38px",
-                "left" : "368px",
-                "top" : "184px"
+                "width" : "31px",
+                "height" : "18px",
+                "left" : "287px",
+                "top" : "534px"
               }
             },
             {
@@ -647,8 +647,8 @@
               "position" : {
                 "width" : "31px",
                 "height" : "24px",
-                "left" : "1026px",
-                "top" : "271px"
+                "left" : "587px",
+                "top" : "577px"
               }
             }
           ]

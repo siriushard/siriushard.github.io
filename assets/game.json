@@ -490,6 +490,17 @@
                 "left": "342px",
                 "top": "650px"
               }
+            },
+            {
+              "type" : "left",
+              "target": "bedroom",
+              "soundClicked": "openDoor.ogg",
+              "position": {
+                "width": "618px",
+                "height": "120px",
+                "left": "342px",
+                "top": "650px"
+              }
             }
           ],
           "objects": [
@@ -564,6 +575,105 @@
               }
             }
           ]
+        }
+      ]
+    },
+    {
+      "name" : "bedroom",
+      "gift" : "keyPart",
+      "stages" : [
+        {
+          "number": 0,
+          "background" : "bedroom_bug.jpg",
+          "dialogBefore" : [""],
+          "dialogAfter": [],
+          "musicBackground" : "gift.mp3",
+          "soundAfterStage" : "",
+          "movers" : [],
+          "objects" : [
+            {
+              "target" : "Муха",
+              "image" : "fly.png",
+              "position" : {
+                "width" : "28px",
+                "height" : "33px",
+                "left" : "521px",
+                "top" : "244px"
+              }
+            },
+            {
+              "target" : "Ящерица",
+              "image" : "lizard.png",
+              "position" : {
+                "width" : "33px",
+                "height" : "53px",
+                "left" : "808px",
+                "top" : "253px"
+              }
+            },
+            {
+              "target" : "Мышь",
+              "image" : "mouse.png",
+              "position" : {
+                "width" : "28px",
+                "height" : "38px",
+                "left" : "1019px",
+                "top" : "530px"
+              }
+            },
+            {
+              "target" : "Паук",
+              "image" : "spider.png",
+              "position" : {
+                "width" : "37px",
+                "height" : "42px",
+                "left" : "721px",
+                "top" : "122px"
+              }
+            },
+            {
+              "target" : "Червяк",
+              "image" : "worm.png",
+              "position" : {
+                "width" : "28px",
+                "height" : "38px",
+                "left" : "368px",
+                "top" : "184px"
+              }
+            },
+            {
+              "target" : "Улитка",
+              "image" : "snail.png",
+              "position" : {
+                "width" : "31px",
+                "height" : "24px",
+                "left" : "1026px",
+                "top" : "271px"
+              }
+            }
+          ]
+        },
+        {
+          "number": 1,
+          "background" : "bedroom_cleaned.jpg",
+          "dialogBefore" : [],
+          "dialogAfter": [],
+          "musicBackground" : "gift.mp3",
+          "soundAfterStage" : "",
+          "movers" : [
+            {
+              "type" : "backward",
+              "target": "hallway-right",
+              "soundClicked": "openDoor.ogg",
+              "position": {
+                "width": "618px",
+                "height": "120px",
+                "left": "342px",
+                "top": "650px"
+              }
+            }
+          ],
+          "objects" : []
         }
       ]
     },

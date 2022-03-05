@@ -18,9 +18,9 @@
               "soundClicked" : "openDoor.ogg",
               "position" : {
                 "width" : "85px",
-                "height" : "239px",
-                "left" : "417px",
-                "top" : "30px"
+                "height" : "320px",
+                "left" : "556px",
+                "top" : "37px"
               }
             }
           ],
@@ -46,8 +46,8 @@
               "position" : {
                 "width" : "30px",
                 "height" : "38px",
-                "left" : "188px",
-                "top" : "209px"
+                "left" : "249px",
+                "top" : "276px"
               }
             },
             {
@@ -56,8 +56,8 @@
               "position" : {
                 "width" : "52px",
                 "height" : "90px",
-                "left" : "254px",
-                "top" : "321px"
+                "left" : "332px",
+                "top" : "372px"
               }
             },
             {
@@ -66,8 +66,8 @@
               "position" : {
                 "width" : "28px",
                 "height" : "38px",
-                "left" : "690px",
-                "top" : "341px"
+                "left" : "888px",
+                "top" : "441px"
               }
             },
             {
@@ -76,8 +76,8 @@
               "position" : {
                 "width" : "28px",
                 "height" : "38px",
-                "left" : "518px",
-                "top" : "327px"
+                "left" : "670px",
+                "top" : "425px"
               }
             },
             {
@@ -86,8 +86,8 @@
               "position" : {
                 "width" : "28px",
                 "height" : "38px",
-                "left" : "434px",
-                "top" : "362px"
+                "left" : "553px",
+                "top" : "467px"
               }
             },
             {
@@ -96,8 +96,8 @@
               "position" : {
                 "width" : "34px",
                 "height" : "24px",
-                "left" : "740px",
-                "top" : "309px"
+                "left" : "951px",
+                "top" : "400px"
               }
             }
           ]
@@ -116,9 +116,9 @@
               "soundClicked" : "footsteps.wav",
               "position" : {
                 "width" : "85px",
-                "height" : "208px",
-                "left" : "74px",
-                "top" : "189px"
+                "height" : "268px",
+                "left" : "93px",
+                "top" : "238px"
               }
             },
             {
@@ -126,10 +126,21 @@
               "target" : "hallway-right",
               "soundClicked" : "footsteps.wav",
               "position" : {
-                "width" : "94px",
-                "height" : "133px",
-                "left" : "840px",
-                "top" : "236px"
+                "width" : "124px",
+                "height" : "166px",
+                "left" : "1073px",
+                "top" : "304px"
+              }
+            },
+            {
+              "type": "backward",
+              "target" : "doorstep",
+              "soundClicked" : "openDoor.ogg",
+              "position" : {
+                "width" : "429px",
+                "height" : "107px",
+                "left" : "459px",
+                "top" : "664px"
               }
             }
           ],
@@ -140,8 +151,8 @@
               "position": {
                 "width": "58px",
                 "height": "66px",
-                "left": "341px",
-                "top": "197px"
+                "left": "437px",
+                "top": "264px"
               }
             },
             {
@@ -150,8 +161,8 @@
               "position": {
                 "width": "59px",
                 "height": "33px",
-                "left": "477px",
-                "top": "149px"
+                "left": "620px",
+                "top": "194px"
               }
             },
             {
@@ -160,8 +171,8 @@
               "position": {
                 "width": "32px",
                 "height": "38px",
-                "left": "506px",
-                "top": "359px"
+                "left": "656px",
+                "top": "461px"
               }
             },
             {
@@ -170,8 +181,8 @@
               "position": {
                 "width": "129px",
                 "height": "89px",
-                "left": "20px",
-                "top": "385px"
+                "left": "46px",
+                "top": "483px"
               }
             },
             {
@@ -180,8 +191,8 @@
               "position": {
                 "width": "34px",
                 "height": "38px",
-                "left": "304px",
-                "top": "66px"
+                "left": "407px",
+                "top": "112px"
               }
             },
             {
@@ -190,8 +201,8 @@
               "position": {
                 "width": "72px",
                 "height": "42px",
-                "left": "653px",
-                "top": "102px"
+                "left": "829px",
+                "top": "152px"
               }
             },
             {
@@ -200,8 +211,8 @@
               "position": {
                 "width": "46px",
                 "height": "53px",
-                "left": "704px",
-                "top": "383px"
+                "left": "898px",
+                "top": "496px"
               }
             },
             {
@@ -210,8 +221,8 @@
               "position": {
                 "width": "54px",
                 "height": "54px",
-                "left": "501px",
-                "top": "209px"
+                "left": "649px",
+                "top": "276px"
               }
             }
           ]
@@ -236,8 +247,8 @@
               "position" : {
                 "width" : "30px",
                 "height" : "38px",
-                "left" : "99px",
-                "top" : "69px"
+                "left" : "119px",
+                "top" : "74px"
               }
             },
             {
@@ -246,8 +257,8 @@
               "position" : {
                 "width" : "36px",
                 "height" : "50px",
-                "left" : "599px",
-                "top" : "56px"
+                "left" : "891px",
+                "top" : "7px"
               }
             },
             {
@@ -256,8 +267,8 @@
               "position" : {
                 "width" : "42px",
                 "height" : "42px",
-                "left" : "552px",
-                "top" : "359px"
+                "left" : "702px",
+                "top" : "463px"
               }
             },
             {
@@ -266,8 +277,8 @@
               "position" : {
                 "width" : "56px",
                 "height" : "48px",
-                "left" : "197px",
-                "top" : "23px"
+                "left" : "273px",
+                "top" : "35px"
               }
             },
             {
@@ -276,8 +287,8 @@
               "position" : {
                 "width" : "28px",
                 "height" : "24px",
-                "left" : "294px",
-                "top" : "235px"
+                "left" : "378px",
+                "top" : "301px"
               }
             },
             {
@@ -286,8 +297,8 @@
               "position" : {
                 "width" : "34px",
                 "height" : "24px",
-                "left" : "153px",
-                "top" : "212px"
+                "left" : "200px",
+                "top" : "278px"
               }
             }
           ]
@@ -305,10 +316,10 @@
               "target": "mainhall",
               "soundClicked": "footsteps.wav",
               "position": {
-                "width": "401px",
+                "width": "618px",
                 "height": "120px",
-                "left": "279px",
-                "top": "491px"
+                "left": "342px",
+                "top": "650px"
               }
             }
           ],
@@ -319,8 +330,8 @@
               "position" : {
                 "width" : "22px",
                 "height" : "41px",
-                "left" : "429px",
-                "top" : "248px"
+                "left" : "550px",
+                "top" : "327px"
               }
             },
             {
@@ -329,8 +340,8 @@
               "position" : {
                 "width" : "36px",
                 "height" : "68px",
-                "left" : "265px",
-                "top" : "7px"
+                "left" : "333px",
+                "top" : "12px"
               }
             },
             {
@@ -339,8 +350,8 @@
               "position" : {
                 "width" : "54px",
                 "height" : "186px",
-                "left" : "32px",
-                "top" : "124px"
+                "left" : "60px",
+                "top" : "187px"
               }
             },
             {
@@ -349,8 +360,8 @@
               "position" : {
                 "width" : "35px",
                 "height" : "32px",
-                "left" : "235px",
-                "top" : "210px"
+                "left" : "302px",
+                "top" : "281px"
               }
             },
             {
@@ -359,8 +370,8 @@
               "position" : {
                 "width" : "60px",
                 "height" : "87px",
-                "left" : "603px",
-                "top" : "244px"
+                "left" : "835px",
+                "top" : "363px"
               }
             },
             {
@@ -369,8 +380,8 @@
               "position" : {
                 "width" : "39px",
                 "height" : "32px",
-                "left" : "417px",
-                "top" : "39px"
+                "left" : "539px",
+                "top" : "54px"
               }
             },
             {
@@ -405,8 +416,8 @@
               "position" : {
                 "width" : "28px",
                 "height" : "33px",
-                "left" : "398px",
-                "top" : "191px"
+                "left" : "521px",
+                "top" : "244px"
               }
             },
             {
@@ -415,8 +426,8 @@
               "position" : {
                 "width" : "33px",
                 "height" : "53px",
-                "left" : "626px",
-                "top" : "196px"
+                "left" : "808px",
+                "top" : "253px"
               }
             },
             {
@@ -425,8 +436,8 @@
               "position" : {
                 "width" : "28px",
                 "height" : "38px",
-                "left" : "763px",
-                "top" : "382px"
+                "left" : "1019px",
+                "top" : "530px"
               }
             },
             {
@@ -435,8 +446,8 @@
               "position" : {
                 "width" : "37px",
                 "height" : "42px",
-                "left" : "553px",
-                "top" : "79px"
+                "left" : "721px",
+                "top" : "122px"
               }
             },
             {
@@ -445,8 +456,8 @@
               "position" : {
                 "width" : "28px",
                 "height" : "38px",
-                "left" : "284px",
-                "top" : "143px"
+                "left" : "368px",
+                "top" : "184px"
               }
             },
             {
@@ -455,8 +466,8 @@
               "position" : {
                 "width" : "31px",
                 "height" : "24px",
-                "left" : "756px",
-                "top" : "94px"
+                "left" : "1026px",
+                "top" : "271px"
               }
             }
           ]
@@ -474,10 +485,10 @@
               "target": "mainhall",
               "soundClicked": "footsteps.wav",
               "position": {
-                "width": "502px",
-                "height": "82px",
-                "left": "326px",
-                "top": "521px"
+                "width": "618px",
+                "height": "120px",
+                "left": "342px",
+                "top": "650px"
               }
             },
             {
@@ -485,9 +496,9 @@
               "target": "bedroom",
               "soundClicked": "openDoor.ogg",
               "position": {
-                "width": "90px",
-                "height": "379px",
-                "left": "270px",
+                "width": "136px",
+                "height": "515px",
+                "left": "321px",
                 "top": "89px"
               }
             }
@@ -499,8 +510,8 @@
               "position" : {
                 "width" : "47px",
                 "height" : "111px",
-                "left" : "709px",
-                "top" : "262px"
+                "left" : "907px",
+                "top" : "31px"
               }
             },
             {
@@ -509,8 +520,8 @@
               "position" : {
                 "width" : "88px",
                 "height" : "67px",
-                "left" : "389px",
-                "top" : "398px"
+                "left" : "405px",
+                "top" : "594px"
               }
             },
             {
@@ -519,8 +530,8 @@
               "position" : {
                 "width" : "81px",
                 "height" : "52px",
-                "left" : "655px",
-                "top" : "427px"
+                "left" : "879px",
+                "top" : "562px"
               }
             },
             {
@@ -529,8 +540,8 @@
               "position" : {
                 "width" : "63px",
                 "height" : "40px",
-                "left" : "376px",
-                "top" : "188px"
+                "left" : "963px",
+                "top" : "426px"
               }
             },
             {
@@ -539,8 +550,8 @@
               "position" : {
                 "width" : "36px",
                 "height" : "27px",
-                "left" : "343px",
-                "top" : "40px"
+                "left" : "443px",
+                "top" : "53px"
               }
             },
             {
@@ -549,8 +560,8 @@
               "position" : {
                 "width" : "23px",
                 "height" : "76px",
-                "left" : "523px",
-                "top" : "138px"
+                "left" : "675px",
+                "top" : "173px"
               }
             },
             {
@@ -559,8 +570,8 @@
               "position" : {
                 "width" : "31px",
                 "height" : "24px",
-                "left" : "601px",
-                "top" : "221px"
+                "left" : "772px",
+                "top" : "289px"
               }
             }
           ]
@@ -586,8 +597,8 @@
               "position" : {
                 "width" : "28px",
                 "height" : "33px",
-                "left" : "411px",
-                "top" : "131px"
+                "left" : "533px",
+                "top" : "183px"
               }
             },
             {
@@ -596,8 +607,8 @@
               "position" : {
                 "width" : "47px",
                 "height" : "78px",
-                "left" : "35px",
-                "top" : "229px"
+                "left" : "59px",
+                "top" : "301px"
               }
             },
             {
@@ -606,8 +617,8 @@
               "position" : {
                 "width" : "34px",
                 "height" : "41px",
-                "left" : "379px",
-                "top" : "341px"
+                "left" : "482px",
+                "top" : "444px"
               }
             },
             {
@@ -616,8 +627,8 @@
               "position" : {
                 "width" : "37px",
                 "height" : "42px",
-                "left" : "561px",
-                "top" : "487px"
+                "left" : "743px",
+                "top" : "648px"
               }
             },
             {
@@ -626,8 +637,8 @@
               "position" : {
                 "width" : "31px",
                 "height" : "18px",
-                "left" : "210px",
-                "top" : "416px"
+                "left" : "287px",
+                "top" : "534px"
               }
             },
             {
@@ -636,8 +647,8 @@
               "position" : {
                 "width" : "31px",
                 "height" : "24px",
-                "left" : "457px",
-                "top" : "446px"
+                "left" : "587px",
+                "top" : "577px"
               }
             }
           ]
@@ -655,10 +666,10 @@
               "target": "hallway-right",
               "soundClicked": "openDoor.ogg",
               "position": {
-                "width": "475px",
-                "height": "77px",
-                "left": "201px",
-                "top": "540px"
+                "width": "618px",
+                "height": "120px",
+                "left": "342px",
+                "top": "650px"
               }
             }
           ],
@@ -669,8 +680,8 @@
               "position" : {
                 "width" : "68px",
                 "height" : "43px",
-                "left" : "86px",
-                "top" : "430px"
+                "left" : "170px",
+                "top" : "702px"
               }
             },
             {
@@ -679,8 +690,8 @@
               "position" : {
                 "width" : "31px",
                 "height" : "24px",
-                "left" : "179px",
-                "top" : "278px"
+                "left" : "285px",
+                "top" : "520px"
               }
             },
             {
@@ -689,8 +700,8 @@
               "position" : {
                 "width" : "27px",
                 "height" : "37px",
-                "left" : "305px",
-                "top" : "314px"
+                "left" : "395px",
+                "top" : "428px"
               }
             },
             {
@@ -699,8 +710,8 @@
               "position" : {
                 "width" : "79px",
                 "height" : "79px",
-                "left" : "643px",
-                "top" : "454px"
+                "left" : "891px",
+                "top" : "535px"
               }
             },
             {
@@ -709,8 +720,8 @@
               "position" : {
                 "width" : "31px",
                 "height" : "47px",
-                "left" : "451px",
-                "top" : "183px"
+                "left" : "579px",
+                "top" : "260px"
               }
             },
             {
@@ -719,8 +730,8 @@
               "position" : {
                 "width" : "98px",
                 "height" : "129px",
-                "left" : "722px",
-                "top" : "3px"
+                "left" : "965px",
+                "top" : "1px"
               }
             },
             {
@@ -729,8 +740,8 @@
               "position" : {
                 "width" : "53px",
                 "height" : "83px",
-                "left" : "484px",
-                "top" : "115px"
+                "left" : "632px",
+                "top" : "150px"
               }
             }
           ]
@@ -755,8 +766,8 @@
               "position" : {
                 "width" : "125px",
                 "height" : "160px",
-                "left" : "486px",
-                "top" : "174px"
+                "left" : "640px",
+                "top" : "259px"
               },
               "content" : "Здравствуйте, милые дамы. Здравствуйте, наши волшебные и несравненные. Здравствуйте, наши загадочные и вдохновляющие.\n\nВ этот прекрасный(как и любой другой, проведённый в вашем обществе) день мы бы могли долго растекаться мыслью по древу, рассказывая вам о том, какие вы волнующие, трепетные и нежные...\nНо это как-то банально. Давайте, лучше, вместо этого мы пообещаем вам рассказывать об этом не только 8 марта, хорошо? )\n\nОт лица всех мужчин ЛК хотим вам пожелать... Хотя, нет - хотим ПОПРОСИТЬ - оставайтесь, пожалуйста, самими собой - теми, кого мы так любим и ценим.\nА теперь - про пожелания. Побольше вам улыбок, девчонки(уж мы-то постараемся), успеха и обычного женского счастья. И пусть жизнь распахивает перед вами новые горизонты, как вышколенный швейцар - двери дорогого ресторана\n\nС ПРАЗДНИКОМ!"
             }

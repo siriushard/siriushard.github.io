@@ -673,7 +673,78 @@
               }
             }
           ],
-          "objects" : []
+          "objects" : [
+            {
+              "target" : "Дневник",
+              "image" : "notebook.png",
+              "position" : {
+                "width" : "68px",
+                "height" : "43px",
+                "left" : "170px",
+                "top" : "702px"
+              }
+            },
+            {
+              "target" : "Лампочка",
+              "image" : "lightBulb.png",
+              "position" : {
+                "width" : "31px",
+                "height" : "24px",
+                "left" : "285px",
+                "top" : "520px"
+              }
+            },
+            {
+              "target" : "Новогодняя игрушка",
+              "image" : "cristmasdecoration.png",
+              "position" : {
+                "width" : "27px",
+                "height" : "37px",
+                "left" : "395px",
+                "top" : "428px"
+              }
+            },
+            {
+              "target" : "Весы",
+              "image" : "scale.png",
+              "position" : {
+                "width" : "79px",
+                "height" : "79px",
+                "left" : "891px",
+                "top" : "535px"
+              }
+            },
+            {
+              "target" : "Прищепка",
+              "image" : "clothesPin.png",
+              "position" : {
+                "width" : "31px",
+                "height" : "47px",
+                "left" : "579px",
+                "top" : "260px"
+              }
+            },
+            {
+              "target" : "Глобус",
+              "image" : "earthGlobe.png",
+              "position" : {
+                "width" : "98px",
+                "height" : "129px",
+                "left" : "965px",
+                "top" : "1px"
+              }
+            },
+            {
+              "target" : "Песочные часы",
+              "image" : "hourglass.png",
+              "position" : {
+                "width" : "53px",
+                "height" : "83px",
+                "left" : "632px",
+                "top" : "150px"
+              }
+            }
+          ]
         }
       ]
     },

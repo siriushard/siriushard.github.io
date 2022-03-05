@@ -30,6 +30,7 @@
     },
     {
       "name" : "mainhall",
+      "gift" : "keyPart",
       "stages" : [
         {
           "number" : 0,
@@ -39,16 +40,6 @@
           "musicBackground" : "mainhall_bug.mp3",
           "soundAfterStage" : "cleanedMagic.ogg",
           "objects": [
-            {
-              "target" : "Огрызок яблока",
-              "image" : "apple-stump.png",
-              "position" : {
-                "width" : "27px",
-                "height" : "39px",
-                "left" : "389px",
-                "top" : "544px"
-              }
-            },
             {
               "target" : "Муха",
               "image" : "fly.png",
@@ -77,16 +68,6 @@
                 "height" : "38px",
                 "left" : "888px",
                 "top" : "441px"
-              }
-            },
-            {
-              "target" : "Яд",
-              "image" : "poison.png",
-              "position" : {
-                "width" : "19px",
-                "height" : "44px",
-                "left" : "309px",
-                "top" : "358px"
               }
             },
             {
@@ -250,6 +231,7 @@
     },
     {
       "name" : "hallway-left",
+      "gift" : "keyPart",
       "stages" : [
         {
           "name" : 0,
@@ -260,63 +242,43 @@
           "soundAfterStage" : "cleanedMagic.ogg",
           "objects": [
             {
-              "target" : "Огрызок яблока",
-              "image" : "apple-stump.png",
-              "position" : {
-                "width" : "27px",
-                "height" : "39px",
-                "left" : "389px",
-                "top" : "544px"
-              }
-            },
-            {
               "target" : "Муха",
               "image" : "fly.png",
               "position" : {
                 "width" : "30px",
                 "height" : "38px",
-                "left" : "249px",
-                "top" : "276px"
+                "left" : "119px",
+                "top" : "74px"
               }
             },
             {
               "target" : "Ящерица",
               "image" : "lizard.png",
               "position" : {
-                "width" : "52px",
-                "height" : "90px",
-                "left" : "332px",
-                "top" : "372px"
+                "width" : "36px",
+                "height" : "50px",
+                "left" : "891px",
+                "top" : "7px"
               }
             },
             {
               "target" : "Мышь",
               "image" : "mouse.png",
               "position" : {
-                "width" : "28px",
-                "height" : "38px",
-                "left" : "888px",
-                "top" : "441px"
-              }
-            },
-            {
-              "target" : "Яд",
-              "image" : "poison.png",
-              "position" : {
-                "width" : "19px",
-                "height" : "44px",
-                "left" : "309px",
-                "top" : "358px"
+                "width" : "42px",
+                "height" : "42px",
+                "left" : "702px",
+                "top" : "463px"
               }
             },
             {
               "target" : "Паук",
               "image" : "spider.png",
               "position" : {
-                "width" : "28px",
-                "height" : "38px",
-                "left" : "670px",
-                "top" : "425px"
+                "width" : "56px",
+                "height" : "48px",
+                "left" : "273px",
+                "top" : "35px"
               }
             },
             {
@@ -324,9 +286,9 @@
               "image" : "worm.png",
               "position" : {
                 "width" : "28px",
-                "height" : "38px",
-                "left" : "553px",
-                "top" : "467px"
+                "height" : "24px",
+                "left" : "378px",
+                "top" : "301px"
               }
             },
             {
@@ -335,8 +297,8 @@
               "position" : {
                 "width" : "34px",
                 "height" : "24px",
-                "left" : "951px",
-                "top" : "400px"
+                "left" : "200px",
+                "top" : "278px"
               }
             }
           ]
@@ -367,6 +329,7 @@
     },
     {
       "name" : "hallway-right",
+      "gift" : "keyPart",
       "stages" : [
         {
           "name" : 0,
@@ -377,33 +340,23 @@
           "soundAfterStage" : "cleanedMagic.ogg",
           "objects": [
             {
-              "target" : "Огрызок яблока",
-              "image" : "apple-stump.png",
-              "position" : {
-                "width" : "27px",
-                "height" : "39px",
-                "left" : "389px",
-                "top" : "544px"
-              }
-            },
-            {
               "target" : "Муха",
               "image" : "fly.png",
               "position" : {
-                "width" : "30px",
-                "height" : "38px",
-                "left" : "249px",
-                "top" : "276px"
+                "width" : "28px",
+                "height" : "33px",
+                "left" : "521px",
+                "top" : "244px"
               }
             },
             {
               "target" : "Ящерица",
               "image" : "lizard.png",
               "position" : {
-                "width" : "52px",
-                "height" : "90px",
-                "left" : "332px",
-                "top" : "372px"
+                "width" : "33px",
+                "height" : "53px",
+                "left" : "808px",
+                "top" : "253px"
               }
             },
             {
@@ -412,28 +365,18 @@
               "position" : {
                 "width" : "28px",
                 "height" : "38px",
-                "left" : "888px",
-                "top" : "441px"
-              }
-            },
-            {
-              "target" : "Яд",
-              "image" : "poison.png",
-              "position" : {
-                "width" : "19px",
-                "height" : "44px",
-                "left" : "309px",
-                "top" : "358px"
+                "left" : "1019px",
+                "top" : "530px"
               }
             },
             {
               "target" : "Паук",
               "image" : "spider.png",
               "position" : {
-                "width" : "28px",
-                "height" : "38px",
-                "left" : "670px",
-                "top" : "425px"
+                "width" : "37px",
+                "height" : "42px",
+                "left" : "721px",
+                "top" : "122px"
               }
             },
             {
@@ -442,18 +385,18 @@
               "position" : {
                 "width" : "28px",
                 "height" : "38px",
-                "left" : "553px",
-                "top" : "467px"
+                "left" : "368px",
+                "top" : "184px"
               }
             },
             {
               "target" : "Улитка",
               "image" : "snail.png",
               "position" : {
-                "width" : "34px",
+                "width" : "31px",
                 "height" : "24px",
-                "left" : "951px",
-                "top" : "400px"
+                "left" : "1026px",
+                "top" : "271px"
               }
             }
           ]
@@ -478,7 +421,92 @@
               }
             }
           ],
-          "objects": []
+          "objects": [
+            {
+              "target" : "Скрипка",
+              "image" : "violin.png",
+              "position" : {
+                "width" : "47px",
+                "height" : "111px",
+                "left" : "907px",
+                "top" : "31px"
+              }
+            },
+            {
+              "target" : "Роза",
+              "image" : "rose.png",
+              "position" : {
+                "width" : "88px",
+                "height" : "67px",
+                "left" : "405px",
+                "top" : "594px"
+              }
+            },
+            {
+              "target" : "Ботинки",
+              "image" : "boots.png",
+              "position" : {
+                "width" : "81px",
+                "height" : "52px",
+                "left" : "879px",
+                "top" : "562px"
+              }
+            },
+            {
+              "target" : "Мышеловка",
+              "image" : "mousetrap.png",
+              "position" : {
+                "width" : "63px",
+                "height" : "40px",
+                "left" : "963px",
+                "top" : "426px"
+              }
+            },
+            {
+              "target" : "Курильная трубка",
+              "image" : "smokingPipe.png",
+              "position" : {
+                "width" : "36px",
+                "height" : "27px",
+                "left" : "443px",
+                "top" : "53px"
+              }
+            },
+            {
+              "target" : "Галстук",
+              "image" : "tie.png",
+              "position" : {
+                "width" : "23px",
+                "height" : "76px",
+                "left" : "675px",
+                "top" : "173px"
+              }
+            },
+            {
+              "target" : "Бильярдный шар",
+              "image" : "8ball.png",
+              "position" : {
+                "width" : "31px",
+                "height" : "24px",
+                "left" : "772px",
+                "top" : "289px"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name" : "gift",
+      "gift" : "",
+      "stages" : [
+        {
+          "number": 0,
+          "background" : "gift_chest.jpg",
+          "dialogBefore" : ["Поздравляю! Ты решила все головоломки, нашла части ключа и открыла сундук", "Давай же скорей смотреть, что там!", "Таааак... какой-то хлам.. Бутылочки, книги. Хмм. А, вот тут письмо. Скорее всего его и спрятали мужчины Лаборатории Качества.", "Ух, аж ручки дрожат, так хочется открыть и прочитать. Но это поздравление для тебя и других девушек, поэтому давай ты!"],
+          "dialogAfter": [],
+          "musicBackground" : "hallway_right_cleaned.mp3",
+          "soundAfterStage" : ""
         }
       ]
     }

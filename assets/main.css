@@ -240,3 +240,29 @@ button:focus { outline: none; }
     top: 305px;
     cursor: url(graphics/cursor/pointer.png) 4 1, default;
 }
+
+#navigationKeyMissView {
+    position: absolute;
+    bottom: 20px;
+    left: 70px;
+    width: 116px;
+    height: 255px;
+    background: url(graphics/gui/key-miss.png) no-repeat center;
+    background-size: contain;
+}
+
+#navigationKeyContainerView {
+    overflow: hidden;
+    position: absolute;
+    width: 116px;
+    height: 0;
+}
+
+#navigationKeyView {
+    position: absolute;
+    top: 0;
+    width: 116px;
+    height: 255px;
+    background: url(graphics/gui/key.png) no-repeat center;
+    background-size: contain;
+}

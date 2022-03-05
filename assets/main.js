@@ -124,6 +124,8 @@ const STAGE_PHASES = {
 let stagePhase;
 
 let finishedLocations = [];
+let keyPartsNeed = 3;
+let keyParts = 0;
 let miniGameFeed = [];
 
 function changeLocation(locationName) {
@@ -225,9 +227,18 @@ function nextPhase() {
         stagePhase = STAGE_PHASES.FINISHED;
         nextPhase();
     } else if (stagePhase === STAGE_PHASES.FINISHED) {
-        console.log('32')
         if (currentStageIndex === currentLocation.stages.length - 1) {
             finishedLocations.push(currentLocation.name);
+
+            if (typeof currentLocation.gift !== "undefined" && currentLocation.gift !== "") {
+                keyParts++;
+                let keyPercent = (100 / keyPartsNeed) * keyParts;
+                $navigationKeyContainerView.css('height', `${keyPercent}%`);
+            }
+
+            if (keyParts === keyPartsNeed) {
+                changeLocation('gift');
+            }
         }
         if (typeof currentStage.soundAfterStage !== "undefined" && currentStage.soundAfterStage !== "") {
             let audio = new Audio(`/assets/sounds/${currentStage.soundAfterStage}`);
@@ -270,6 +281,7 @@ $locationView.on('click', '.btn-item_object', function () {
 let $navigationView = $('#navigationView');
 let $navigationContentView = $('#navigationContentView');
 let $btnNavigationToggle = $('#btn-navigation-toggle');
+let $navigationKeyContainerView = $('#navigationKeyContainerView');
 
 function updateNavigation() {
     $navigationContentView.html('');

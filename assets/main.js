@@ -265,7 +265,7 @@ $locationView.on('click', '.btn-item_journal', function () {
         audio.play();
 
         $journalContentView.html($(this).find('div').html());
-        $journalView.show('slow');
+        $journalView.fadeIn('slow');
     }
 });
 

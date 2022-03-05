@@ -124,7 +124,7 @@ const STAGE_PHASES = {
 let stagePhase;
 
 let finishedLocations = [];
-let keyPartsNeed = 3;
+let keyPartsNeed = 1;
 let keyParts = 0;
 let miniGameFeed = [];
 
@@ -147,6 +147,15 @@ function changeStage(location, stageIndex, stageName) {
 
     $locationView.html('');
     $locationView.css("background-image", `url(assets/graphics/locations/${currentStage.background})`);
+
+    if (typeof currentStage.journals !== "undefined") {
+        currentStage.journals.forEach(function (journal) {
+            let $journal = $(`<div class="btn-item_journal draggable" data-mover-target="${journal.target}"></div>`);
+            $journal.appendTo($locationView);
+            $journal.css(journal.position);
+            $journal.css('background-image', `url(assets/graphics/items/${journal.image})`);
+        });
+    }
 
     if (typeof currentStage.movers !== "undefined") {
         currentStage.movers.forEach(function (mover) {
@@ -237,7 +246,9 @@ function nextPhase() {
             }
 
             if (keyParts === keyPartsNeed) {
-                changeLocation('gift');
+                if (currentLocation.name !== 'gift') {
+                    changeLocation('gift');
+                }
             }
         }
         if (typeof currentStage.soundAfterStage !== "undefined" && currentStage.soundAfterStage !== "") {
@@ -247,6 +258,13 @@ function nextPhase() {
         nextStage();
     }
 }
+
+$locationView.on('click', '.btn-item_journal', function () {
+    if (stagePhase === STAGE_PHASES.FINISHED) {
+        let audio = new Audio(`/assets/sounds/openJournal.ogg`);
+        audio.play();
+    }
+});
 
 $locationView.on('click', '.btn-item_mover', function () {
     if (stagePhase === STAGE_PHASES.FINISHED) {

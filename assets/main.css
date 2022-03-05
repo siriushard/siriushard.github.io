@@ -146,6 +146,14 @@ button:focus { outline: none; }
     background-position: center !important;
 }
 
+.btn-item_journal {
+    position: absolute;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    cursor: url(graphics/cursor/grab.png) 4 1, default;
+}
+
 #dialogView {
     position: absolute;
     bottom: 10px;
